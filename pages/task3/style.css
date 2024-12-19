@@ -1,0 +1,180 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;    
+}
+
+header{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+h1, 
+h2{
+    font-weight: bold;
+}
+
+header h1{
+    font-size: 32px;
+    }
+
+.flex-section{
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+main h2{
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.flex-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    
+}
+
+.flex-item{
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-item img{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+    /* margin-bottom: 10px; */
+}
+/* *стили для секции grid-section* */
+.grid-section {
+    background-color: #eaeaea;
+    padding: 20px;
+}
+.grid-section h2 {
+    text-align: center;
+}
+.grid-section p{
+    text-align: center;
+    line-height: 2;
+    padding-bottom: 20px;
+}
+ .grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20 px;
+    justify-items: center;
+ }
+/* стили для .grid-item */
+.grid-item{
+    width: 75%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.grid-item h3{
+    text-align: center;
+    
+}
+.grid-item hr{
+    width: 150px;
+    margin-top: 0;
+    
+}
+ .grid-item img{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#section p{
+    font-size: 20px; 
+    color: #f1eaea;  
+    text-align: center;
+    background-color: #333;
+    padding: 20px;  
+}
+
+
+ /* Примеры работы с позиционированием  */
+ /* .blok{
+    width: 250px;
+    height: 150px;
+ }
+.mini-blok{
+    widht: 250px;
+    height: 150px;
+}
+ .div-1{
+    background-color: yellow;
+ }
+.div-2{
+    background-color: blueviolet;
+    position: relative;
+    left: 350px;
+    top: 120px;
+}
+
+.div-3{
+    background-color: teal;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    z-index: 1;
+}
+.div-3-1{
+    background-color: disque;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.div-3-2{
+    background-color: coral;
+    position: absolute;
+    top: 350px;
+    left: 350px;
+}
+
+.div-4{
+background-color: sandybrown;
+position: fixed;
+top: 0px;
+left: 0;
+}
+
+.div-5{
+    background-color: tomato;
+} */
+
+.top-bth {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #000;
+    border-radius: 10px;
+    color: #fff;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}

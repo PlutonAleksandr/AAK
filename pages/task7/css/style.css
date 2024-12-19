@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-family-main: "Montserrat", sans-serif;
+
+    --font-size-extra-small: 12px;
+    --font-size-small: 14px;
+    --font-size-s-medium: 16px;
+    --font-size-medium: 18px;
+    --font-size-extra-medium: 24px;
+    --font-size-big: 36px;
+
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --color-main: #2e363e;
+    --color-black: #000000;
+
+    --line-height-medium: 150%;
+}
+
+* {
+    font-family: var(--font-family-main);
+    color: var(--color-main);
+    line-height: var(--line-height-medium);
+    text-decoration: none;
+}
+
+/* Общие стили */
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 61.5%;
+    margin: 0 auto;
+}
+
+.grey-section {
+    background-color: #ecf0f1;
+}
+
+h2.wrapper {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-big);
+    line-height: 133%;
+    text-align: center;
+    color: var(--color-black);
+    display: flex;
+    justify-content: center; /* Центрирование заголовка */
+    align-items: center; /* Центрирование по вертикали */
+    width: 100%; /* Занимает всю ширину родительского контейнера */
+}
+
+/* Работа с header */
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 38px;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.logo img {
+    max-width: 50px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1; /* Занимаем все доступное пространство между логотипом и контактами */
+    transition: transform 0.3s ease;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Стили для бургерного меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.burger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.heading a {
+    font-size: var(--font-size-small);
+    transition: color 0.5s ease;
+}
+
+.heading a:hover {
+    color: #4a94ff;
+}
+
+.heading-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#phone {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+    line-height: 152%;
+}
+
+.graphik {
+    font-size: var(--font-size-extra-small);
+}
+
+/* Секция flex-section */
+
+.flex-section {
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* Секция о нас */
+
+.text-container {
+    display: flex;
+    gap: 20px; /* Расстояние между элементами внутри .text-container */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.circle-image {
+    width: 200px; /* Размер круглых картинок */
+    height: 200px;
+    border-radius: 50%; /* Превращение картинок в круги */
+    overflow: hidden; /* Обрезание изображений по кругу */
+}
+
+.circle-image img {
+    width: 100%; /* Заполнение полностью круглой области */
+    height: auto;
+    display: block; /* Убирает пустое пространство вокруг изображения */
+}
+
+.left-image {
+    order: -1; /* Перенос левой картинки в начало контейнера */
+}
+
+.right-image {
+    order: 1; /* Перенос правой картинки в конец контейнера */
+}
+
+.text-content {
+    flex: 1; /* Растягивание текстового контента на всю доступную ширину */
+}
+
+/* Пропуск строки после списка */
+.after-list {
+    margin-top: 20px;
+}
+
+
+/* Стили для текста "Наши принципы" */
+.principle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.white-border {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 8px 16px 0 rgba(194, 198, 208, 0.06);
+    padding: 20px;
+}
+
+.languages {
+    list-style-type: disc; /* Используем маркеры */
+    margin-left: 20px; /* Отступ слева для вложенного списка */
+    padding-left: 0;
+}
+
+.languages li {
+    margin: 0; /* Убираем отступы сверху и снизу у пунктов списка */
+}
+
+/* Стили для секции "Каталог программ" */
+#section-tovary {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+}
+
+.flex-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 8px 16px 0 rgba(194, 198, 208, 0.06);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 20px); /* Задает базовую ширину и позволяет элементам сжиматься и расширяться */
+    min-width: 250px; /* Минимальная ширина элемента */
+    margin-bottom: 20px; /* Отступ между строками */
+}
+
+.flex-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.text__flex-item {
+    padding: 50px 44px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.text__flex-item h3 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-extra-medium);
+    line-height: 143%;
+}
+
+.text__flex-item p {
+    font-size: var(--font-size-s-medium);
+    flex-grow: 1;
+}
+
+.text__flex-item .link__flex-item {
+    margin-top: auto;
+    text-align: center;
+}
+
+.price {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-extra-medium);
+    color: #434b53;
+    margin-bottom: 14px;
+}
+
+.link__flex-item {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 20px 40px;
+    background-color: #1f3a93;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium);
+    line-height: 152%;
+    color: #fff;
+}
+
+
+/* slider */
+
+.slider-container {
+    position: relative;
+    width: 80%; /* Ширина слайдера относительно родительского контейнера */
+    margin: auto;
+    overflow: hidden; /* Скрытие содержимого, выходящего за пределы слайдера */
+    height: 400px; /* Фиксированная высота слайдера */
+}
+
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    overflow: auto; /* Добавление прокрутки для случая, когда содержимое не умещается */
+
+
+}
+
+.slide-content {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    overflow: auto; /* Добавление прокрутки для случая, когда содержимое не умещается */
+
+}
+
+.slide-text {
+    flex: 1;
+    margin-right: 20px; /* Отступ справа для разделения текста и изображения */
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide-img {
+    flex: 0 0 auto; /* Оставляем фиксированную ширину для изображения */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-img img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 10px; /* Уменьшили верхний отступ */
+}
+
+.nav-button {
+    width: 80px;
+    border: none;
+    cursor: pointer;
+    background-color: #61c9e1;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(10, 85, 216, 0.407);
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 5px 30px rgba(11, 99, 246, 1);
+}
+
+/* Стили для секции "Консультация" */
+#section-consultation {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.consultation-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-form label {
+    margin-bottom: 10px;
+    font-weight: var(--font-weight-medium);
+}
+
+.consultation-form input,
+.consultation-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: var(--font-size-s-medium);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.consultation-form textarea {
+    resize: none; /* Запрещает изменение размера */
+    height: 150px; /* Фиксированная высота */
+    overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+}
+
+.consultation-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: var(--font-size-s-medium);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consultation-form button:hover {
+    background-color: #0056b3;
+}
+
+    
+/* footer */
+
+.footer-section {
+    padding: 46px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+
+    font-size: var(--font-size-extra-small);
+    color: var(--color-footer);
+}
+.footer-str {
+    display: flex;
+    justify-content: space-between;
+    gap: 43px;
+}
+
+.footer-str a {
+    transition: color 0.3s ease;
+}
+
+.footer-str a:hover {
+    color: #2495ff;
+}

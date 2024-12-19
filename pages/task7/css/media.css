@@ -1,0 +1,126 @@
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 720px) {
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        z-index: 1000;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        opacity: 0; /* Начальная прозрачность меню */
+        transform: translateY(-100%); /* Начальное положение за пределами экрана */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация изменения прозрачности и положения */
+        padding-top: 20px;
+        align-items: center; /* Центрировать элементы внутри меню */
+    }
+    
+    .menu.show {
+        opacity: 1; /* Показать меню с полной прозрачностью */
+        transform: translateY(0); /* Показать меню на экране */
+    }
+
+    .menu .mobile-logo {
+        display: none; /* Скрыть мобильный логотип по умолчанию */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.show .mobile-logo {
+        display: flex; /* Показать мобильный логотип при открытом меню */
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .menu.show .mobile-logo img {
+        max-width: 30px; /* Уменьшить размер логотипа в мобильной версии */
+        border-radius: 15px;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    .logo img {
+        max-width: 50px;
+        margin-right: 10px;
+    }
+
+    .heading-contact {
+        display: none; /* Скрыть контактную информацию в мобильной версии */
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center; /* Выравнивание элементов по центру */
+    }
+
+    .heading {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-container {
+        flex-direction: column; /* Изменить направление flex на колонку */
+    }
+
+    .left-image,
+    .right-image {
+        align-self: center; /* Центрирование картинок по вертикали */
+    }
+
+    /* Адаптация для слайдера */
+    .slide-content {
+        flex-direction: column; /* Изменить направление flex на колонку */
+        align-items: center; /* Центрировать содержимое */
+        overflow-y: auto; /* Добавить вертикальную прокрутку при необходимости */
+        max-height: 300px; /* Максимальная высота контента слайда для активации прокрутки */
+    }
+
+    .slide-text {
+        margin-right: 0; /* Убрать отступ справа */
+        text-align: center; /* Центрировать текст */
+    }
+
+    .slide-img {
+        margin-top: 20px; /* Добавить отступ сверху для изображения */
+        padding-right: 0; /* Убрать отступ справа */
+    }
+
+    .nav-buttons {
+        margin-top: 10px; /* Уменьшить отступ сверху для кнопок */
+    }
+}
+
+/* Скрыть мобильный логотип на больших экранах */
+@media (min-width: 721px) {
+    .mobile-logo {
+        display: none;
+    }
+
+   
+}
